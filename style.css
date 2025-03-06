@@ -88,17 +88,17 @@ body {
   align-items: center;
   font-size: 15px;
   background-color: hsl(233, 47%, 7%);
+  overflow-y: hidden;
 }
 
 main {
   /* border: 2px solid coral; */
-  width: 20rem;
+  max-width: 20rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 2fr;
   background: hsl(277, 64%, 61%);
   border-radius: 20px;
-  overflow: hidden;
 }
 
 img {
@@ -131,7 +131,7 @@ h1 {
 
 .main-paragraph {
   color: hsla(0, 0%, 100%, 0.6);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-family: "Lexend Deca", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -139,7 +139,7 @@ h1 {
 }
 
 .small-paragraph {
-  margin: 20px;
+  margin-bottom: 20px;
   /* border: 2px solid coral; */
   max-width: 5em;
   text-align: center;
@@ -161,4 +161,58 @@ h1 {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+.responsive-image {
+  display: none;
+}
+
+@media (min-width: 40rem) {
+  main {
+    max-width: 80rem;
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+    
+  }
+
+
+  .second-section {
+    width: 35em;
+    padding: 33px;
+  }
+
+  h1 {
+    /* border: 2px solid coral; */
+    text-align: left;
+    justify-self: left;
+    max-width: 25em;
+    font-size: 2em;
+    margin-bottom: 40px;
+  }
+
+  .main-paragraph {
+    /* border: 2px solid coral; */
+    text-align: left;
+    justify-self: left;
+    max-width: 25em;
+    margin-bottom: 70px;
+  }
+  .mobile-image {
+    display: none;
+  }
+  .responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .paragraph-container {
+    display: flex;
+    /* border: 2px solid coral; */
+    justify-content: space-between;
+    max-width: 25em;
+  }
+
+
 }
